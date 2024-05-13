@@ -9,3 +9,5 @@ export type { IGenre } from "./types";
 export type { IFetchMovieDetailsParams } from "./types";
 export type { IFetchMovieSimilar } from "./types";
 export type { IFetchMovieSimilarParams } from "./types";
+export type { IFetchMovieTopRated } from "./types";
+export type { IFetchMovieTopRatedParams } from "./types";

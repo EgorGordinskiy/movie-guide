@@ -21,7 +21,7 @@ export const MoviePage: FC = () => {
     return (
         <section className="pt-2 pb-5">
             <MovieDetails movie={movie} />
-            <h3 className="py-3">Похожие фильмы</h3>
+            <h3 className="p-3">Похожие фильмы</h3>
             <UiSlider scrollAmount={500}>
                 {data?.results.map((movie) => (
                     <li key={movie.id}>
