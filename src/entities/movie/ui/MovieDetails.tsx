@@ -26,10 +26,11 @@ export const MovieDetails: FC<IMovieDetailsProps> = (props) => {
                     <h1 className="text-3xl md:text-5xl font-bold">
                         {movie?.title}
                     </h1>
-                    <p className="mt-2 text-gray-400 text-sm">
+                    <p>{movie?.genres.map((genre) => genre.name).join(", ")}</p>
+                    <p className="mt-2 text-neutral-400 text-sm">
                         {movie?.release_date}
                     </p>
-                    <p className="mt-2 w-full md:max-w-[70%] lg:max-w-[60%] xl:max-w-[55%] text-gray-200">
+                    <p className="mt-2 w-full md:max-w-[70%] lg:max-w-[60%] xl:max-w-[55%]">
                         {movie?.overview}
                     </p>
                 </div>

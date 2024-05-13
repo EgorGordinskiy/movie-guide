@@ -7,8 +7,8 @@ export const UiLink: FC<IUiLinkProps> = (props) => {
     return (
         <NavLink
             className={({ isActive }) =>
-                `flex gap-1 items-center py-1 px-3 rounded ${!isActive && "hover:text-neutral-100"}  transition-all
-                ${isActive ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" : ""}`
+                `flex gap-1 items-center py-2 border-b-2  ${!isActive && "hover:text-neutral-100 border-transparent"}  transition-all
+                ${isActive ? "border-purple-600" : ""}`
             }
             {...props}
         />

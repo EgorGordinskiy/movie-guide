@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import { CiViewList } from "react-icons/ci";
 import { PiAirplay } from "react-icons/pi";
 import { Outlet } from "react-router-dom";
 import { PATH_PAGE } from "shared/lib";
@@ -29,10 +30,10 @@ export const MainLayout: FC = () => {
         <>
             <header
                 className={`fixed top-0 left-0 right-0 bg-neutral-950 z-50 transform transition-transform duration-300 ${
-                    show ? "translate-y-0" : "-translate-y-full"
+                    show ? "translate-y-0" : "-translate-y-[102%]"
                 }`}
             >
-                <div className="p-2 flex items-center gap-7">
+                <div className="px-2 flex items-center gap-7">
                     <UiLogo />
                     <nav>
                         <ul className="flex gap-3">
@@ -42,7 +43,9 @@ export const MainLayout: FC = () => {
                                 </UiLink>
                             </li>
                             <li>
-                                <UiLink to={"*"}>Каталог</UiLink>
+                                <UiLink to={"*"}>
+                                    <CiViewList size={20} /> Каталог
+                                </UiLink>
                             </li>
                         </ul>
                     </nav>
