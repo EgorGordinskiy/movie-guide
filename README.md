@@ -8,3 +8,5 @@
 4. Для запуска введите команду `npm run dev`.
 
 ![Главный страница](docs/images/home_page.png)
+
+![Страница фильма](docs/images/movie_page.png)
