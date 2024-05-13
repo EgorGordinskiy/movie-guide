@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { LinkProps, NavLink } from "react-router-dom";
 
-export interface IUiLinkProps extends LinkProps {}
+export interface IUiNavLinkProps extends LinkProps {}
 
-export const UiLink: FC<IUiLinkProps> = (props) => {
+export const UiNavLink: FC<IUiNavLinkProps> = (props) => {
     return (
         <NavLink
             className={({ isActive }) =>
