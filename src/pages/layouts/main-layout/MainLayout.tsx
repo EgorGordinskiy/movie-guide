@@ -1,5 +1,7 @@
 import { FC, useEffect, useState } from "react";
+import { PiAirplay } from "react-icons/pi";
 import { Outlet } from "react-router-dom";
+import { PATH_PAGE } from "shared/lib";
 import { UiLink, UiLogo } from "shared/ui";
 
 export const MainLayout: FC = () => {
@@ -35,7 +37,9 @@ export const MainLayout: FC = () => {
                     <nav>
                         <ul className="flex gap-3">
                             <li>
-                                <UiLink to={"*"}>Главная</UiLink>
+                                <UiLink to={PATH_PAGE.HOME}>
+                                    <PiAirplay /> <span>Главная</span>
+                                </UiLink>
                             </li>
                             <li>
                                 <UiLink to={"*"}>Каталог</UiLink>
