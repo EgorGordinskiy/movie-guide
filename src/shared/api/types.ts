@@ -31,6 +31,8 @@ export interface IFetchMoviePopular {
     total_results: number;
 }
 
+export interface IFetchMovieSimilar extends IFetchMoviePopular {}
+
 export interface IFetchMoviePopularParams {
     language: string;
     page: number;
@@ -39,5 +41,7 @@ export interface IFetchMoviePopularParams {
 export interface IFetchMovieDetailsParams {
     language: string;
 }
+
+export interface IFetchMovieSimilarParams extends IFetchMoviePopularParams {}
 
 export interface IFetchMovieDetails extends IMovieDetails {}

@@ -3,7 +3,7 @@ import {
     type IFetchMoviePopular,
     type IFetchMoviePopularParams,
     createInstance,
-    BodyType,
+    type BodyType,
 } from "shared/api";
 
 import { QUERY_KEYS } from "shared/lib";

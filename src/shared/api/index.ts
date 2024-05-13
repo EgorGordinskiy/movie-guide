@@ -7,3 +7,5 @@ export type { IFetchMovieDetails } from "./types";
 export type { IMovieDetails } from "./types";
 export type { IGenre } from "./types";
 export type { IFetchMovieDetailsParams } from "./types";
+export type { IFetchMovieSimilar } from "./types";
+export type { IFetchMovieSimilarParams } from "./types";

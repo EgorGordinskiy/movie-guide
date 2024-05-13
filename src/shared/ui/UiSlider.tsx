@@ -27,7 +27,7 @@ export const UiSlider: FC<IUiSliderProps> = (props) => {
         <div className="relative flex items-center group">
             <MdChevronLeft
                 onClick={handleSlideLeft}
-                className="bg-white left-2 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-50 hidden group-hover:block"
+                className="bg-neutral-800 left-2 rounded-full absolute opacity-80 hover:opacity-100 cursor-pointer z-50 hidden group-hover:block"
                 size={40}
             />
             <div

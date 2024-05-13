@@ -25,7 +25,7 @@ export function useMovieDetailsQuery(
     params: IFetchMovieDetailsParams,
 ) {
     return useQuery({
-        queryKey: QUERY_KEYS.MOVIE_POPULAR.concat([id, params]),
+        queryKey: QUERY_KEYS.MOVIE_DETAILS.concat([id]),
         queryFn: ({ signal }) => fetchMovieDetails(signal, id, params),
     });
 }

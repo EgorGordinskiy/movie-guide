@@ -1,19 +1,41 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { UiLink, UiLogo } from "shared/ui";
 
 export const MainLayout: FC = () => {
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    useEffect(() => {
+        const controlNavbar = () => {
+            if (window.scrollY > lastScrollY) {
+                setShow(false);
+            } else {
+                setShow(true);
+            }
+
+            setLastScrollY(window.scrollY);
+        };
+        window.addEventListener("scroll", controlNavbar);
+
+        return () => {
+            window.removeEventListener("scroll", controlNavbar);
+        };
+    }, [lastScrollY]);
+
     return (
         <>
-            <header className="">
-                <div className="container py-2 flex items-center gap-7">
+            <header
+                className={`fixed top-0 left-0 right-0 bg-neutral-950 z-50 transform transition-transform duration-300 ${
+                    show ? "translate-y-0" : "-translate-y-full"
+                }`}
+            >
+                <div className="p-2 flex items-center gap-7">
                     <UiLogo />
                     <nav>
                         <ul className="flex gap-3">
                             <li>
-                                <UiLink className="text-purple-500" to={"*"}>
-                                    Главная
-                                </UiLink>
+                                <UiLink to={"*"}>Главная</UiLink>
                             </li>
                             <li>
                                 <UiLink to={"*"}>Каталог</UiLink>
@@ -22,9 +44,8 @@ export const MainLayout: FC = () => {
                     </nav>
                 </div>
             </header>
-            <div className="py-5">
-                <Outlet />
-            </div>
+
+            <Outlet />
         </>
     );
 };
