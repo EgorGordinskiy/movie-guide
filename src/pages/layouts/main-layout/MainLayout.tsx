@@ -11,7 +11,9 @@ export const MainLayout: FC = () => {
                     <nav>
                         <ul className="flex gap-3">
                             <li>
-                                <UiLink to={"*"}>Главная</UiLink>
+                                <UiLink className="text-purple-500" to={"*"}>
+                                    Главная
+                                </UiLink>
                             </li>
                             <li>
                                 <UiLink to={"*"}>Каталог</UiLink>
@@ -20,7 +22,7 @@ export const MainLayout: FC = () => {
                     </nav>
                 </div>
             </header>
-            <div className="container py-5">
+            <div className="py-5">
                 <Outlet />
             </div>
         </>

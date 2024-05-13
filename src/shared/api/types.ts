@@ -15,6 +15,15 @@ export interface IMovie {
     vote_count: number;
 }
 
+export interface IMovieDetails extends Omit<IMovie, "genre_ids"> {
+    genres: IGenre[];
+}
+
+export interface IGenre {
+    id: number;
+    name: string;
+}
+
 export interface IFetchMoviePopular {
     page: number;
     results: IMovie[];
@@ -26,3 +35,9 @@ export interface IFetchMoviePopularParams {
     language: string;
     page: number;
 }
+
+export interface IFetchMovieDetailsParams {
+    language: string;
+}
+
+export interface IFetchMovieDetails extends IMovieDetails {}
