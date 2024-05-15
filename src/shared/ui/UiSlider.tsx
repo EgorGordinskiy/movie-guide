@@ -24,21 +24,21 @@ export const UiSlider: FC<IUiSliderProps> = (props) => {
     };
 
     return (
-        <div className="relative flex items-center group">
+        <div className="group relative flex items-center">
             <MdChevronLeft
                 onClick={handleSlideLeft}
-                className="bg-neutral-800 left-2 rounded-full absolute opacity-80 hover:opacity-100 cursor-pointer z-50 hidden group-hover:block"
+                className="absolute left-2 z-50 hidden cursor-pointer rounded-full bg-neutral-800 opacity-80 hover:opacity-100 group-hover:block"
                 size={40}
             />
             <div
                 ref={sliderRef}
-                className="flex gap-3 w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+                className="scrollbar-hide flex size-full gap-3 overflow-x-scroll scroll-smooth whitespace-nowrap"
             >
                 {children}
             </div>
             <MdChevronRight
                 onClick={handleSlideRight}
-                className="right-2 bg-neutral-800 rounded-full absolute opacity-80 hover:opacity-100 cursor-pointer z-50 hidden group-hover:block"
+                className="absolute right-2 z-50 hidden cursor-pointer rounded-full bg-neutral-800 opacity-80 hover:opacity-100 group-hover:block"
                 size={40}
             />
         </div>

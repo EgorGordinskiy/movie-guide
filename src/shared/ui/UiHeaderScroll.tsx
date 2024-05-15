@@ -3,6 +3,7 @@ import { FC, ReactNode, useEffect, useState } from "react";
 export interface IUiHeaderScrollProps {
     children: ReactNode;
 }
+
 export const UiHeaderScroll: FC<IUiHeaderScrollProps> = (props) => {
     const { children } = props;
 
@@ -28,11 +29,11 @@ export const UiHeaderScroll: FC<IUiHeaderScrollProps> = (props) => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 bg-neutral-950 z-50 transform transition-transform duration-300 ${
-                show ? "translate-y-0" : "-translate-y-[102%]"
+            className={`fixed inset-x-0 top-0 z-50 bg-neutral-950 transition-transform duration-300 ${
+                show ? "translate-y-0" : "translate-y-[-102%]"
             }`}
         >
-            <div className="px-2 flex items-center gap-7">{children}</div>
+            <div className="flex items-center gap-7 px-2">{children}</div>
         </header>
     );
 };
