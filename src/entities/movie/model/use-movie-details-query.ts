@@ -27,5 +27,6 @@ export function useMovieDetailsQuery(
     return useQuery({
         queryKey: QUERY_KEYS.MOVIE_DETAILS.concat([id]),
         queryFn: ({ signal }) => fetchMovieDetails(signal, id, params),
+        retry: 0,
     });
 }

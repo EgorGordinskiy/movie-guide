@@ -5,7 +5,7 @@ export const UiSpinner: FC = () => {
         <div role="status">
             <svg
                 aria-hidden="true"
-                className="size-8 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
+                className="size-8 animate-spin fill-purple-600 text-neutral-500"
                 viewBox="0 0 100 101"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

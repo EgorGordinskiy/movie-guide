@@ -3,7 +3,7 @@ import { MovieRowTemplate } from "features/movie";
 import { useMoviePopularQuery } from "entities/movie";
 
 export const MoviePopularRow: FC = () => {
-    const { data } = useMoviePopularQuery({
+    const { data, isError, isPending } = useMoviePopularQuery({
         language: "ru-Ru",
         page: 1,
     });
@@ -11,7 +11,8 @@ export const MoviePopularRow: FC = () => {
     return (
         <MovieRowTemplate
             title="Популярные"
-            loading={!data}
+            loading={isPending}
+            error={isError}
             movies={data?.results || []}
         />
     );

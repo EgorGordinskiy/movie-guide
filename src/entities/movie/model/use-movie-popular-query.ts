@@ -24,5 +24,6 @@ export function useMoviePopularQuery(params: IFetchMoviePopularParams) {
     return useQuery({
         queryKey: QUERY_KEYS.MOVIE_POPULAR.concat([params]),
         queryFn: ({ signal }) => fetchMoviePopular(signal, params),
+        retry: 0,
     });
 }

@@ -28,5 +28,6 @@ export function useMovieSimilarQuery(
     return useQuery({
         queryKey: QUERY_KEYS.MOVIE_SIMILAR.concat([id, params]),
         queryFn: ({ signal }) => fetchMovieSimilar(signal, id, params),
+        retry: 0,
     });
 }

@@ -24,5 +24,6 @@ export function useMovieTopRatedQuery(params: IFetchMovieTopRatedParams) {
     return useQuery({
         queryKey: QUERY_KEYS.TOP_RATED.concat([params]),
         queryFn: ({ signal }) => fetchMovieTopRated(signal, params),
+        retry: 0,
     });
 }
