@@ -1,3 +1,3 @@
-export { PATH_PAGE } from "./react-router/paths";
-export { QUERY_KEYS } from "./tanstack-query/query-keys";
-export { queryClient } from "./tanstack-query/query-client";
+export { PATH_PAGE } from "./react-router";
+export { QUERY_KEYS } from "./tanstack-query";
+export { queryClient } from "./tanstack-query";

@@ -1,6 +1,6 @@
-import { useMovieTopRatedQuery } from "entities/movie";
-import { MovieRowTemplate } from "features/movie";
 import { FC } from "react";
+import { MovieRowTemplate } from "features/movie";
+import { useMovieTopRatedQuery } from "entities/movie";
 
 export const MovieTopRatedRow: FC = () => {
     const { data } = useMovieTopRatedQuery({

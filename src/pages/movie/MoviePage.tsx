@@ -1,7 +1,7 @@
-import { MovieDetails, useMovieDetailsQuery } from "entities/movie";
 import { FC } from "react";
 import { useParams } from "react-router-dom";
 import { MovieSimilarRow } from "widgets/movie";
+import { MovieDetails, useMovieDetailsQuery } from "entities/movie";
 
 export const MoviePage: FC = () => {
     const { id } = useParams();

@@ -1,3 +1,3 @@
-export { MovieRowTemplate } from "./ui/MovieRowTemplate";
+export { MovieRowTemplate } from "./ui";
 
-export type { IMovieRowTemplateProps } from "./ui/MovieRowTemplate";
+export type { IMovieRowTemplateProps } from "./ui";

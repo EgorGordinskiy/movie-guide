@@ -1,3 +1,3 @@
-export { MoviePopularRow } from "./ui/MoviePopularRow";
-export { MovieTopRatedRow } from "./ui/MovieTopRatedRow";
-export { MovieSimilarRow } from "./ui/MovieSimilarRow";
+export { MoviePopularRow } from "./ui";
+export { MovieTopRatedRow } from "./ui";
+export { MovieSimilarRow } from "./ui";

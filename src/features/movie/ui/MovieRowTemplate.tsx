@@ -1,5 +1,5 @@
-import { MovieCard } from "entities/movie";
 import { FC } from "react";
+import { MovieCard } from "entities/movie";
 import { IMovie } from "shared/api";
 import { UiSlider } from "shared/ui";
 

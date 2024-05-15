@@ -1,6 +1,6 @@
-import { useMoviePopularQuery } from "entities/movie";
-import { MovieRowTemplate } from "features/movie";
 import { FC } from "react";
+import { MovieRowTemplate } from "features/movie";
+import { useMoviePopularQuery } from "entities/movie";
 
 export const MoviePopularRow: FC = () => {
     const { data } = useMoviePopularQuery({

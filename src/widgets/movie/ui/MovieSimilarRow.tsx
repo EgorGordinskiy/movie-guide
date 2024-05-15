@@ -1,7 +1,7 @@
-import { useMovieSimilarQuery } from "entities/movie";
-import { MovieRowTemplate } from "features/movie";
 import { FC } from "react";
 import { useParams } from "react-router-dom";
+import { MovieRowTemplate } from "features/movie";
+import { useMovieSimilarQuery } from "entities/movie";
 
 export const MovieSimilarRow: FC = () => {
     const { id } = useParams();
