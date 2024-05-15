@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { IMovie } from "shared/api";
+import { UiMovieRating } from "shared/ui";
 
 export interface IMovieCardProps {
     movie: IMovie;
@@ -19,9 +20,7 @@ export const MovieCard: FC<IMovieCardProps> = (props) => {
                 src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 alt="movie poster"
             />
-            <div className="absolute right-2 top-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-2 py-1 text-xs">
-                {movie.vote_average}
-            </div>
+            <UiMovieRating rating={movie.vote_average} />
         </div>
     );
 };

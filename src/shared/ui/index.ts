@@ -4,7 +4,9 @@ export { UiSlider } from "./UiSlider";
 export { UiSpinner } from "./UiSpinner";
 export { UiNavigation } from "./UiNavigation";
 export { UiError } from "./UiError";
+export { UiMovieRating } from "./UiMovieRating";
 
+export type { IUiMovieRatingProps } from "./UiMovieRating";
 export type { IUiNavLinkProps } from "./UiNavLink";
 export type { IUiSliderProps } from "./UiSlider";
 export type { IUiNavigationProps } from "./UiNavigation";
