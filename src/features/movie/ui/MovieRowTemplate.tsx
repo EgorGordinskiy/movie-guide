@@ -1,7 +1,8 @@
 import { FC } from "react";
-import { MovieCard } from "entities/movie";
+import { useNavigate } from "react-router-dom";
+import { MovieCard, MovieCardSkeleton } from "entities/movie";
 import { IMovie } from "shared/api";
-import { UiError, UiSlider, UiSpinner } from "shared/ui";
+import { UiError, UiSlider } from "shared/ui";
 
 export interface IMovieRowTemplateProps {
     title?: string;
@@ -12,6 +13,10 @@ export interface IMovieRowTemplateProps {
 
 export const MovieRowTemplate: FC<IMovieRowTemplateProps> = (props) => {
     const { title, movies, loading, error } = props;
+
+    const navigate = useNavigate();
+    const handleClickCard = (movieId: number) => navigate(`/movie/${movieId}`);
+
     return (
         <div>
             <h2 className="p-2 text-xl font-bold">{title}</h2>
@@ -21,15 +26,22 @@ export const MovieRowTemplate: FC<IMovieRowTemplateProps> = (props) => {
                 </div>
             )}
             {loading && (
-                <div className="flex h-[336px] items-center justify-center">
-                    <UiSpinner />
-                </div>
+                <UiSlider scrollAmount={500}>
+                    {Array(20)
+                        .fill(0)
+                        .map((_, index) => (
+                            <MovieCardSkeleton key={index} />
+                        ))}
+                </UiSlider>
             )}
             {movies && (
                 <UiSlider scrollAmount={500}>
                     {movies.map((movie) => (
                         <div key={movie.id}>
-                            <MovieCard movie={movie} />
+                            <MovieCard
+                                movie={movie}
+                                onClickCard={() => handleClickCard(movie.id)}
+                            />
                         </div>
                     ))}
                 </UiSlider>
