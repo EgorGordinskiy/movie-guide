@@ -14,15 +14,15 @@ export interface IMovie {
     vote_average: number;
     vote_count: number;
 }
-
 export interface IMovieDetails extends Omit<IMovie, "genre_ids"> {
     genres: IGenre[];
 }
-
 export interface IGenre {
     id: number;
     name: string;
 }
+
+//fetch
 
 export interface IFetchMoviePopular {
     page: number;
@@ -30,21 +30,18 @@ export interface IFetchMoviePopular {
     total_pages: number;
     total_results: number;
 }
-
 export interface IFetchMovieTopRated extends IFetchMoviePopular {}
-
 export interface IFetchMovieSimilar extends IFetchMoviePopular {}
+export interface IFetchMovieDetails extends IMovieDetails {}
+
+//params
 
 export interface IFetchMoviePopularParams {
     language: string;
     page: number;
 }
-
 export interface IFetchMovieDetailsParams {
     language: string;
 }
-
 export interface IFetchMovieTopRatedParams extends IFetchMoviePopularParams {}
 export interface IFetchMovieSimilarParams extends IFetchMoviePopularParams {}
-
-export interface IFetchMovieDetails extends IMovieDetails {}

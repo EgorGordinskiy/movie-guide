@@ -19,7 +19,7 @@ export const UiSpinner: FC = () => {
                     fill="currentFill"
                 />
             </svg>
-            <span className="sr-only">Loading...</span>
+            <span className="sr-only">Загрузка...</span>
         </div>
     );
 };
