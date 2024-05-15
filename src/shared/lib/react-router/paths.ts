@@ -1,4 +1,6 @@
+type TId = number | ":id";
+
 export const PATH_PAGE = {
     HOME: "/",
-    MOVIE: "/movie/:id",
+    MOVIE: (id: TId): string => `/movie/${id}`,
 } as const;

@@ -16,7 +16,7 @@ export function Router() {
                     element: <HomePage />,
                 },
                 {
-                    path: PATH_PAGE.MOVIE,
+                    path: PATH_PAGE.MOVIE(":id"),
                     element: <MoviePage />,
                 },
             ],
