@@ -1,6 +1,6 @@
-import { MovieCard, useMovieTopRatedQuery } from "entities/movie";
+import { useMovieTopRatedQuery } from "entities/movie";
+import { MovieRowTemplate } from "features/movie";
 import { FC } from "react";
-import { UiSlider } from "shared/ui";
 
 export const MovieTopRatedRow: FC = () => {
     const { data } = useMovieTopRatedQuery({
@@ -9,12 +9,10 @@ export const MovieTopRatedRow: FC = () => {
     });
 
     return (
-        <UiSlider scrollAmount={500}>
-            {data?.results.map((movie) => (
-                <div key={movie.id}>
-                    <MovieCard movie={movie} loading={!data} />
-                </div>
-            ))}
-        </UiSlider>
+        <MovieRowTemplate
+            title="Топ"
+            loading={!data}
+            movies={data?.results || []}
+        />
     );
 };
