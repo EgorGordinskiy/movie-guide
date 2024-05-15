@@ -7,6 +7,15 @@
 3. Выполните команду `npm i`.
 4. Для запуска введите команду `npm run dev`.
 
+## 🛠 Технологии
+
+1. React
+2. TypeScript
+3. Vite
+4. Tailwind CSS
+5. FSD
+6. Tanstack Query
+
 ![Главный страница](docs/images/home_page.png)
 
 ![Страница фильма](docs/images/movie_page.png)
