@@ -1,4 +1,5 @@
-import axios, { AxiosError, AxiosRequestConfig } from "axios";
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
+import { z } from "zod";
 
 export const apiInstance = axios.create({
     baseURL: import.meta.env.VITE_TMDB_API_URL,
@@ -10,13 +11,29 @@ export const apiInstance = axios.create({
 
 export const createInstance = async <T>(
     config: AxiosRequestConfig,
+    schema: z.ZodSchema<T>,
     options?: AxiosRequestConfig,
 ): Promise<T> => {
-    const response = await apiInstance({
-        ...config,
-        ...options,
-    });
-    return response.data;
+    try {
+        const response: AxiosResponse = await apiInstance({
+            ...config,
+            ...options,
+        });
+
+        const parsedData = schema.parse(response.data);
+        return parsedData;
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            throw new AxiosError(
+                "Request failed",
+                error.response?.status.toString(),
+                error.config,
+                error.request,
+                error.response,
+            );
+        }
+        throw error;
+    }
 };
 
 export type BodyType<Data> = Data;

@@ -5,7 +5,7 @@ import { useMoviePopularQuery } from "entities/movie";
 export const MoviePopularRow: FC = () => {
     const { data, isError, isPending } = useMoviePopularQuery({
         language: "ru-Ru",
-        page: 10,
+        page: 1,
     });
 
     return (

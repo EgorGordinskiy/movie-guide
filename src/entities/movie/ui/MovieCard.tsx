@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { IMovie } from "shared/api";
 import { UiMovieRating } from "shared/ui";
+import { TMovie } from "../api";
 
 export interface IMovieCardProps {
-    movie: IMovie;
+    movie: TMovie;
     onClickCard?: () => void;
 }
 

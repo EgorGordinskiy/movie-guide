@@ -15,6 +15,7 @@
 4. Tailwind CSS
 5. FSD
 6. Tanstack Query
+7. Zod
 
 ![Главный страница](docs/images/home_page.png)
 

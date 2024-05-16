@@ -1,12 +1,11 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import { MovieCard, MovieCardSkeleton } from "entities/movie";
-import { IMovie } from "shared/api";
+import { MovieCard, MovieCardSkeleton, TMovie } from "entities/movie";
 import { UiError, UiSlider } from "shared/ui";
 
 export interface IMovieRowTemplateProps {
     title?: string;
-    movies: IMovie[];
+    movies: TMovie[];
     loading?: boolean;
     error?: boolean;
 }

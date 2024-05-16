@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { IGenre } from "shared/api";
+import { TGenre } from "../api";
 
 export interface IGenreCardProps {
-    genre: IGenre;
+    genre: TGenre;
     onClickCard?: () => void;
 }
 

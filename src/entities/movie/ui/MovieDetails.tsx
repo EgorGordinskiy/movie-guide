@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { IMovieDetails } from "shared/api";
+import { TMovieDetails } from "../api";
 
 export interface IMovieDetailsProps {
-    movie: IMovieDetails;
+    movie: TMovieDetails;
 }
 
 export const MovieDetails: FC<IMovieDetailsProps> = (props) => {
