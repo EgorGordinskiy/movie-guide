@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { CiViewList } from "react-icons/ci";
 import { PiAirplay } from "react-icons/pi";
 import { PATH_PAGE, useHeaderScroll } from "shared/lib";
 import { UiLogo, UiNavigation } from "shared/ui";
@@ -22,12 +21,6 @@ export const Header: FC = () => {
                             path: PATH_PAGE.HOME,
                             icon: <PiAirplay />,
                             text: "Главная",
-                        },
-                        {
-                            key: "catalog",
-                            path: "*",
-                            icon: <CiViewList size={20} />,
-                            text: "Каталог",
                         },
                     ]}
                 />
