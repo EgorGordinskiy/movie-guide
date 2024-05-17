@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { MovieCard, MovieCardSkeleton, TMovie } from "entities/movie";
+import { PATH_PAGE } from "shared/lib";
 import { UiError, UiSlider } from "shared/ui";
 
 export interface IMovieRowTemplateProps {
@@ -14,7 +15,8 @@ export const MovieRowTemplate: FC<IMovieRowTemplateProps> = (props) => {
     const { title, movies, loading, error } = props;
 
     const navigate = useNavigate();
-    const handleClickCard = (movieId: number) => navigate(`/movie/${movieId}`);
+    const handleClickCard = (movieId: number) =>
+        navigate(PATH_PAGE.MOVIE(movieId));
 
     return (
         <div>
