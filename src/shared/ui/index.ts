@@ -1,5 +1,5 @@
 export { UiNavLink } from "./UiNavLink";
-export { UiLogo } from "./UiLogo";
+export { UiLogo } from "./ui-logo";
 export { UiSlider } from "./UiSlider";
 export { UiSpinner } from "./UiSpinner";
 export { UiNavigation } from "./UiNavigation";
