@@ -27,4 +27,9 @@ describe("UiLogo", () => {
         const iconElement = linkElement.querySelector("svg");
         expect(iconElement).toBeInTheDocument();
     });
+
+    it("не изменился", () => {
+        const { asFragment } = renderWithRouter(<UiLogo />);
+        expect(asFragment()).toMatchSnapshot();
+    });
 });
